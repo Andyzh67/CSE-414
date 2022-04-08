@@ -1,0 +1,19 @@
+The DBMS that we use in this assignment is running somewhere in one of Microsoft's data
+centers. What do you think about the idea of offering a DBMS as a service in a public cloud?
+
+A: Nowadays the amount of data generated is much more beyond the scope of personal
+computers' memories. By offering a DBMS as a cloud service, Microsoft provides all its
+users the opportunity to analyze large datasets, or do some data science relevant work.
+
+
+
+What do you consider the benefits or drawbacks to this approach compared to running the
+database locally?
+
+A: Benefits: It offers fast speed in analyzing datasets, and it's convenient to open
+and save queries, and export the data generated.
+
+Drawbacks: Users may suffer from data loss and service attacks. And the performance of cloud computing
+seems to be highly dependent on internet connection, and cloud services may sometimes experience
+outage and downtime. Besides, users of Microsoft Azure services have to spend a considerable amount of money
+comparing to running the database locally free of charge.

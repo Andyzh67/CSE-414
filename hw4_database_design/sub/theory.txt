@@ -1,0 +1,68 @@
+Part (a) R(A,B,C,D,E) with functional dependencies D → B, CE → A.
+
+Since D → B, we have D+ = {D,B}, so we break R into R1(B,D), R2(A,C,D,E), R1 is in BCNF.
+Since CE → A, {C,E}+ = {A,C,E}, we break R2 into R3(A,C,E) and R4(C,D,E).
+Then all three tables are in BCNF since for all non-trivial dependency X → Y, X is a superkey.
+Thus the decomposition gives us R1(B,D), R3(A,C,E), and R4(C,D,E).
+
+
+
+
+Part (b) S(A,B,C,D,E) with functional dependencies A → E, BC → A, DE → B.
+
+Since A → E, we have A+ = {A,E}, so we break S into S1(A,E), S2(A,B,C,D), S1 is in BCNF.
+since BC → A, {B,C}+ = {A,B,C}, we break S2 into S3(A,B,C) and S4(B,C,D).
+We can then check to confirm that S3 and S4 are both in BCNF since for all possible
+combination of attributes, its closure is either trivial or all attributes in the table.
+Thus the decomposition gives us S1(A,E), S3(A,B,C), and S4(B,C,D).
+
+
+
+
+
+
+A set of attributes X is called closed (with respect to a given set of functional dependencies) if
+X⁺ = X. Consider a relation with schema R(A,B,C,D) and an unknown set of functional
+dependencies. For each closed attribute set below, give a set of functional dependencies that is
+consistent with it.
+
+
+Part (c) All subsets of {A,B,C,D} are closed.
+
+Since all subsets are closed, we can simply derive that trivial functional dependencies
+A → A
+B → B
+C → C
+D → D
+being consistent functional dependencies.
+
+
+
+
+Part (d) The only closed subsets of {A,B,C,D} are {} and {A,B,C,D}.
+
+The functional dependencies that the closure of every single attribute being
+all attributes, i.e.,
+A → B
+B → C
+C → D
+D → A
+satisfy the given subsets {} and {A,B,C,D} as closed.
+
+
+
+
+
+Part (e) The only closed subsets of {A,B,C,D} are {}, {B,C}, and {A,B,C,D}.
+
+Since the closure of B is not B, but the closure of BC is BC, we have B → C and C → B.
+Let the closure of A and D be all attributes and we have the functional dependencies
+A → B,C,D
+B → C
+C → B
+D → A,B,C
+
+
+
+
+
